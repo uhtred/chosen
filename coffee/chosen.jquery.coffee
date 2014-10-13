@@ -61,6 +61,7 @@ class Chosen extends AbstractChosen
       @selected_item = @container.find('.chosen-single').first()
 
     this.results_build()
+    this.winnow_results()
     this.set_tab_index()
     this.set_label_behavior()
     @form_field_jq.trigger("chosen:ready", {chosen: this})
